@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #023e8a;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tourism Dashboard</h1>
+    <p>Explore the world with us 🌍</p>
+  </header>
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Destinations</a>
+    <a href="#">Bookings</a>
+    <a href="#">Contact</a>
+  </nav>
+  
+  <main class="dashboard">
+    <div class="card">
+      <h2>Top Destinations</h2>
+      <p>Discover the most popular tourist spots around the globe.</p>
+    </div>
+    <div class="card">
+      <h2>Weather Updates</h2>
+      <p id="weather">Loading weather...</p>
+    </div>
+    <div class="card">
+      <h2>Travel Tips</h2>
+      <p>Get insights for safe and joyful journeys.</p>
+    </div>
+  </main>
+  
+  <footer>
+    <p>© 2025 Tourism Dashboard. All Rights Reserved.</p>
+  </footer>
+  
+  <script>
+    // Example JS integration
+    const weatherElement = document.getElementById("weather");
+    const weatherData = ["Sunny ☀️", "Rainy 🌧️", "Cloudy ☁️", "Windy 🌬️"];
+    weatherElement.innerText = 
+      "Today: " + weatherData[Math.floor(Math.random() * weatherData.length)];
+  </script>
+</body>
+</html>
